@@ -46,11 +46,31 @@ export function IconWA(props) {
 	);
 }
 
-export function IconMail(props) {
+export function IconFacebook(props) {
 	return (
-		<SvgIcon {...props}>
-			<path d="M4 7.5h16v9H4z" />
-			<path d="M4.5 8l7.5 5 7.5-5" />
+		<SvgIcon {...props} viewBox="0 0 24 24">
+			<path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.1 1.2-3.3 3-3.3.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 2.9h-1.9v7A10 10 0 0 0 22 12z" />
+		</SvgIcon>
+	);
+}
+
+export function IconInstagram(props) {
+	// Icono de Instagram con tamaño por defecto aumentado
+	return (
+		<SvgIcon size={22} {...props} viewBox="0 0 24 24">
+			<path d="M17 3H7a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4z" />
+			<path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
+			<path d="M17.5 6.2h.01" />
+		</SvgIcon>
+	);
+}
+
+export function IconTikTok(props) {
+	// Icono estilizado de TikTok con tamaño por defecto aumentado
+	return (
+		<SvgIcon size={22} {...props} viewBox="0 0 24 24">
+			<path d="M16 4.5v7.2a3.8 3.8 0 1 1-3.8-3.8" />
+			<path d="M9.5 14.5a3.5 3.5 0 1 0 3.5 3.5v-8" />
 		</SvgIcon>
 	);
 }

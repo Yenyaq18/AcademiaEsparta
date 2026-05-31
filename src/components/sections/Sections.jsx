@@ -7,7 +7,7 @@ import {
 import {
   IconBarbell, IconGraduate, IconShieldCheck,
   IconClock, IconClipboard, IconFamily,
-  IconCheck, IconWA, IconMail,
+  IconCheck, IconWA, IconFacebook, IconInstagram, IconTikTok,
 } from "../icons/Icons";
 import SectionHeader from "../ui/SectionHeader";
 import ProgramCard   from "../cards/ProgramCard";
@@ -302,16 +302,23 @@ export function Footer() {
           className="footer-actions"
           style={{ display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "flex-end" }}
         >
-          <Btn href={`mailto:${SITE.email}`} variant="gold">
-            <IconMail size={17} /> Enviar correo
+          <Btn href={"https://www.facebook.com/share/1BQfkYQfcE/"} variant="ghost" external>
+            <IconFacebook size={17} /> Facebook
           </Btn>
           <Btn
-            href={`https://wa.me/${SITE.whatsapp}?text=Hola%2C%20quiero%20informaci%C3%B3n`}
+            href={"https://wa.me/51965460932?text=Hola,%20me%20interesa%20%20saber%20mas%20el%20proceso%20de%20inscripcion.%20¿Podrían%20brindarme%20más%20información?"}
             variant="whatsapp"
             external
           >
             <IconWA size={17} /> WhatsApp
           </Btn>
+         <Btn href="https://www.instagram.com/esparta.precadete?igsh=MXZpbTAzbDBxb3NqZA==" variant="ghost" external>
+  <IconInstagram size={20} /> Instagram
+</Btn>
+
+<Btn href="https://www.tiktok.com/@espartaprecadete_peru?_r=1&_t=ZS-96pYwRwWyUU" variant="ghost" external>
+  <IconTikTok size={20} /> TikTok
+</Btn>
         </div>
       </div>
 
@@ -331,7 +338,7 @@ export function Footer() {
         }}
       >
         <span>{SITE.copyright} · Todos los derechos reservados</span>
-        <span>{SITE.email}</span>
+       
       </div>
     </footer>
   );

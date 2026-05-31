@@ -22,7 +22,7 @@ export default function Hero() {
             color: '#F0C84A', fontSize: '0.72rem', fontWeight: 600,
             letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 22,
           }}>
-            <IconStar size={11} /> Convocatoria abierta 2025
+            <IconStar size={11} /> Convocatoria abierta 2026
           </div>
 
           <h1 style={{

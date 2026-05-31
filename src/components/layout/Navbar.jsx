@@ -1,7 +1,7 @@
 // src/components/layout/Navbar.jsx
 import { useState, useEffect } from 'react';
 import { NAV_LINKS, SITE } from '../../data/data';
-import { IconShield, IconPhone, IconWA, IconMail, IconMenu, IconClose } from '../icons/Icons';
+import { IconWA, IconFacebook, IconMenu, IconClose } from '../icons/Icons';
 import Btn from '../ui/Btn';
 
 function ContactBtn({ href, icon, color, title, external }) {
@@ -49,10 +49,20 @@ export default function Navbar() {
   }, []);
 
   const contactBtns = [
-    { href: `tel:${SITE.telefono}`,               icon: <IconPhone />, color: '#60A5FA', title: 'Llamar' },
-    { href: `https://wa.me/${SITE.whatsapp}`,      icon: <IconWA />,    color: '#4ADE80', title: 'WhatsApp', external: true },
-    { href: `mailto:${SITE.email}`,               icon: <IconMail />,  color: '#C084FC', title: 'Correo' },
-  ];
+    {
+  href: "https://wa.me/51965460932?text=Hola,%20me%20interesa%20%20saber%20mas%20el%20proceso%20de%20inscripcion.%20¿Podrían%20brindarme%20más%20información?",
+  icon: <IconWA size={18} />,
+  color: '#4ADE80',
+  title: 'WhatsApp',
+  external: true
+},
+{
+  href: "https://www.facebook.com/share/1BQfkYQfcE/",
+  icon: <IconFacebook size={18} />,
+  color: '#1877F2',
+  title: 'Facebook',
+  external: true
+}  ];
 
   return (
     <nav style={{
@@ -68,13 +78,20 @@ export default function Navbar() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16,
       }}>
         {/* Brand */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+        <a className="nav-brand" href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
           <div style={{
             width: 40, height: 40, borderRadius: 11,
-            background: 'linear-gradient(135deg, #C9A227, #8A6A0E)',
+            background: 'rgba(255,255,255,0.04)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            color: '#fff', boxShadow: '0 4px 14px rgba(201,162,39,0.4)', flexShrink: 0,
-          }}><IconShield size={20} color="#fff" /></div>
+            boxShadow: '0 4px 14px rgba(201,162,39,0.2)', flexShrink: 0,
+            overflow: 'hidden',
+          }}>
+            <img
+              src={`${process.env.PUBLIC_URL}/logo192.png`}
+              alt="Esparta"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+          </div>
           <div>
             <div style={{ fontSize: '0.62rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#8FA3B8', lineHeight: 1 }}>
               {SITE.subtitulo}
@@ -91,14 +108,14 @@ export default function Navbar() {
         </div>
 
         {/* Acciones */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <div style={{ display: 'flex', gap: 6 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <div style={{ display: 'flex', gap: 12 }}>
             {contactBtns.map((b, i) => <ContactBtn key={i} {...b} />)}
           </div>
           <Btn href="#contacto" variant="gold" size="sm">Inscribirme</Btn>
           <button className="nav-burger" onClick={() => setMenuOpen(o => !o)} aria-label="Menú"
             style={{
-              display: 'none', background: 'transparent',
+              background: 'transparent',
               border: '1px solid rgba(255,255,255,0.14)',
               borderRadius: 9, padding: 7, color: '#8FA3B8', lineHeight: 0,
             }}>

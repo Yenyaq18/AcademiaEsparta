@@ -6,7 +6,10 @@ export const SITE = {
   email:     "info@academiaesparta.com",
   telefono:  "+573001112233",
   whatsapp:  "573000000000",
-  copyright: "© 2025 Academia Militar Esparta",
+  facebook:   "https://www.facebook.com/academiaesparta",
+  instagram: "https://www.instagram.com/academiaesparta",
+  tiktok:    "https://www.tiktok.com/@academiaesparta",
+  copyright: "© 2026 Academia Militar Esparta",
 };
 
 export const NAV_LINKS = [
