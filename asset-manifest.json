@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/AcademiaEsparta/static/css/main.cb9683b0.css",
+    "main.js": "/AcademiaEsparta/static/js/main.e6f73f80.js",
+    "static/js/453.117f5465.chunk.js": "/AcademiaEsparta/static/js/453.117f5465.chunk.js",
+    "index.html": "/AcademiaEsparta/index.html",
+    "main.cb9683b0.css.map": "/AcademiaEsparta/static/css/main.cb9683b0.css.map",
+    "main.e6f73f80.js.map": "/AcademiaEsparta/static/js/main.e6f73f80.js.map",
+    "453.117f5465.chunk.js.map": "/AcademiaEsparta/static/js/453.117f5465.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb9683b0.css",
+    "static/js/main.e6f73f80.js"
+  ]
+}
